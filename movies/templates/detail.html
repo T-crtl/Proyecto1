@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+    <div class="d-flex justify-content-between align-items-center">
+        <h2>{{ mymovies.name_movie }}</h2>
+        <a href="{% url 'bienvenida' %}" class="btn btn-primary">Home</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="movie-details">
+    <h1>{{ mymovies.name_movie }}</h1>
+    <img src="{{ mymovies.image_url }}" alt="{{ mymovies.name_movie }}" class="details-image" />
+    <p><strong>Description:</strong> {{ mymovies.description }}</p>
+    <p><strong class="pub_datex">Published on:</strong> <q >{{ mymovies.pub_date|date:"F j, Y" }}</q></p>
+</div>
+{% endblock %}

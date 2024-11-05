@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="page-title">Movie List</h1>
+    <ul class="movie-list">
+        {% for x in mymovies %}
+        <li class="movie-container">
+            <div class="movie-content">
+                <img class="movie-image" src="{{ x.image_url }}" alt="{{ x.name_movie }}">
+                <h2 class="movie-title"><a href="details/{{ x.id }}">{{ x.name_movie }}</a></h2>
+                <q class="movie-date">{{ x.pub_date|date:"F j, Y" }}</q>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

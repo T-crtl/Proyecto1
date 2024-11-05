@@ -1,0 +1,150 @@
+.movie-list {
+    list-style-type: none;        /* Eliminar los puntos de la lista */
+    padding: 0;
+    display: grid;                /* Usar grid layout */
+    grid-template-columns: repeat(6, 1fr); /* 6 elementos por fila */
+    gap: 15px;                    /* Espacio entre los elementos */
+    justify-content: center;      /* Centrar el contenido en el contenedor */
+}
+
+.movie-container {
+    text-align: center;           /* Centrar el texto */
+    max-width: 150px;             /* Ancho máximo de cada contenedor */
+}
+
+.movie-image {
+    width: 100%;                  /* Imagen ocupa el 100% del contenedor */
+    height: auto;                 /* Mantener la relación de aspecto */
+    border-radius: 8px;           /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+.movie-title a {
+    text-decoration: none;  /* Sin subrayado en los enlaces */
+    color: #333;            /* Color del texto */
+    font-size: 16px;       /* Tamaño de fuente */
+}
+
+.movie-title a:hover {
+    color: #007BFF;         /* Cambiar color al pasar el mouse */
+}
+
+.movie-date {
+    font-style: italic;            /* Cambia el estilo a itálico */
+    color: #555;                  /* Un color gris suave para un contraste sutil */
+    font-size: 0.9em;             /* Tamaño de fuente un poco más pequeño */
+    border-left: 2px solid #007BFF; /* Línea a la izquierda para destacar */
+    padding-left: 10px;          /* Espaciado interno para separar del borde */
+    margin-top: 5px;             /* Espaciado superior para separar del resto del contenido */
+    display: block;               /* Hace que se muestre como un bloque */
+}
+
+.details-image {
+    width: 100%;             /* Esto asegurará que la imagen use todo el ancho de su contenedor */
+    max-width: 150px;       /* Limitar el ancho máximo para mantener la consistencia */
+    height: auto;           /* Mantiene la relación de aspecto */
+    border-radius: 8px;     /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título y botón */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.d-flex h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.d-flex .btn {
+    background-color: #fff;
+    color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.d-flex .btn:hover {
+    background-color: #e9ecef;
+}
+
+/* Contenido de detalles de la película */
+.movie-details {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.movie-details h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #040a11;
+}
+
+.details-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.movie-details strong {
+    color: #333;
+}
+
+.movie-date {
+    font-style: italic;
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* Estilos de responsividad */
+@media (max-width: 768px) {
+    .movie-details {
+        padding: 15px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .d-flex h2 {
+        font-size: 20px;
+    }
+
+    .details-image {
+        max-width: 100%;
+    }
+}
