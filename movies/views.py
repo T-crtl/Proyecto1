@@ -6,7 +6,8 @@ from .models import Name
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello world")
+    template = loader.get_template("mainsite.html")
+    return HttpResponse(template.render())
 
 def bienvenida(request):
     mymovies = Name.objects.all().values()
